@@ -1,0 +1,1 @@
+This repository contains simulated support incident scenarios created to demonstrate my troubleshooting, analytical thinking and documentation skills. All cases are fictional and do not contain real customer or company data.
