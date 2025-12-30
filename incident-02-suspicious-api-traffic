@@ -1,0 +1,31 @@
+# Incident 02 – Suspicious API Traffic and Credential Management
+
+## 🟢 Scenario
+Monitoring alerts identified an abnormal increase in API requests coming from a specific integration. The traffic pattern suggested possible misuse or misconfiguration of credentials.
+
+## 🟡 Observed Symptoms
+- Sudden spike in request volume
+- Repeated malformed requests
+- Increased error rates impacting system stability
+- Potential risk to API performance
+
+## 🔵 Investigation Steps
+1. Analyzed request logs and traffic patterns
+2. Identified the source integration and associated credentials
+3. Reviewed request payloads and headers
+4. Evaluated potential impact on system performance and security
+5. Assessed whether the behavior aligned with documented API usage
+
+## 🔴 Decision Process
+Based on the analysis, the behavior posed a risk to platform stability. A decision was made to temporarily block the affected credentials while further clarification was requested from the client.
+
+## 🟣 Resolution
+- Temporarily blocked the API credentials to prevent further impact
+- Contacted the client with a clear technical explanation of the issue
+- Assisted the client in identifying misconfiguration on their side
+- Re-enabled credentials after validation and confirmation
+
+## ⚫ Prevention
+- Improved monitoring thresholds for abnormal traffic
+- Updated client-facing documentation
+- Established a clear internal decision-making flow for credential blocking
