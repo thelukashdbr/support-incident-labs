@@ -1,0 +1,32 @@
+# Incident 01 – OAuth Token Expiration Causing API Failures
+
+## 🟢 Scenario
+A SaaS platform started receiving reports of failed API requests from external integrations. The issue was intermittent and occurred mostly during peak usage hours.
+
+## 🟡 Observed Symptoms
+- API requests returning HTTP 401 (Unauthorized)
+- Increased error rate in monitoring dashboards
+- Webhook deliveries failing sporadically
+- Users reporting integration instability
+
+## 🔵 Investigation Steps
+1. Reviewed application and API gateway logs
+2. Identified recurring authentication errors related to expired tokens
+3. Reproduced the issue using Postman with expired OAuth tokens
+4. Validated token expiration and refresh behavior
+5. Checked integration documentation and configuration
+
+## 🔴 Root Cause
+OAuth access tokens were expiring under high load, and the token refresh process was not being triggered correctly in certain edge cases.
+
+## 🟣 Resolution
+- Updated token refresh logic to handle expiration properly
+- Retested API calls with valid and expired tokens
+- Confirmed successful authentication flow
+- Monitored logs after the fix to ensure stability
+
+## ⚫ Prevention
+- Added monitoring alerts for authentication-related errors
+- Improved API documentation regarding token lifecycle
+- Recommended proactive token validation for integrations
+
