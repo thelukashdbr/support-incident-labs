@@ -1,0 +1,30 @@
+# Incident 03 – XML to JSON Data Validation Issue
+
+## 🟢 Scenario
+An integration started failing after receiving data in XML format that was being converted into JSON for processing by downstream services.
+
+## 🟡 Observed Symptoms
+- Data parsing errors
+- Missing or null fields in processed requests
+- Integration failures reported by the client
+
+## 🔵 Investigation Steps
+1. Inspected incoming XML payloads
+2. Compared XML structure against expected schema
+3. Verified XML to JSON conversion logic
+4. Identified inconsistencies in field naming and data types
+5. Reproduced the issue using sample payloads
+
+## 🔴 Root Cause
+The XML payload contained optional fields that were not consistently mapped during the XML to JSON conversion, leading to missing required values in the processed JSON.
+
+## 🟣 Resolution
+- Adjusted validation rules for incoming XML
+- Improved conversion mapping logic
+- Added defensive checks for missing fields
+- Retested the integration with corrected payloads
+
+## ⚫ Prevention
+- Introduced schema validation for incoming XML
+- Updated integration documentation
+- Recommended standardized payload formats to clients
